@@ -15,7 +15,7 @@ const ChatInterface: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: 'Olá! Sou seu assistente educacional. Como posso ajudá-lo a criar uma aula hoje?',
+      text: 'Hello! Eu sou a Hey Gringa, seu assistente educacional para aulas de inglês. Como posso ajudá-lo a criar uma aula incrível hoje?',
       isUser: false,
       timestamp: new Date()
     }
@@ -50,7 +50,7 @@ const ChatInterface: React.FC = () => {
     setTimeout(() => {
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: 'Entendi! Vou ajudá-lo a criar uma aula sobre esse tópico. Que tal começarmos definindo os objetivos de aprendizagem?',
+        text: 'Perfect! Vou ajudá-lo a criar uma aula de inglês sobre esse tópico. Que tal começarmos definindo o nível dos alunos e os objetivos de aprendizagem?',
         isUser: false,
         timestamp: new Date()
       };
@@ -74,8 +74,8 @@ const ChatInterface: React.FC = () => {
             <Bot className="text-white" size={20} />
           </div>
           <div>
-            <h1 className="font-semibold text-gray-900">Assistente Educacional</h1>
-            <p className="text-sm text-gray-500">Online</p>
+            <h1 className="font-semibold text-gray-900">Hey Gringa</h1>
+            <p className="text-sm text-gray-500">Assistente de Inglês • Online</p>
           </div>
         </div>
       </div>

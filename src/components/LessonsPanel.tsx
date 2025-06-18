@@ -17,37 +17,37 @@ const LessonsPanel: React.FC = () => {
   const lessons: Lesson[] = [
     {
       id: '1',
-      title: 'Verbo To Be',
+      title: 'Present Simple',
       date: '15/06/24',
-      subject: 'Inglês',
+      subject: 'Grammar',
       duration: '45 min'
     },
     {
       id: '2',
-      title: 'Equações do 2º Grau',
+      title: 'Verb To Be',
       date: '14/06/24',
-      subject: 'Matemática',
+      subject: 'Basic Grammar',
       duration: '50 min'
     },
     {
       id: '3',
-      title: 'Revolução Industrial',
+      title: 'Daily Routines Vocabulary',
       date: '13/06/24',
-      subject: 'História',
+      subject: 'Vocabulary',
       duration: '40 min'
     },
     {
       id: '4',
-      title: 'Fotossíntese',
+      title: 'Past Simple Tense',
       date: '12/06/24',
-      subject: 'Biologia',
+      subject: 'Grammar',
       duration: '45 min'
     },
     {
       id: '5',
-      title: 'Predicado Verbal',
+      title: 'Family Members',
       date: '11/06/24',
-      subject: 'Português',
+      subject: 'Vocabulary',
       duration: '40 min'
     }
   ];
@@ -86,10 +86,10 @@ const LessonsPanel: React.FC = () => {
             <div className="text-center py-12">
               <BookOpen className="mx-auto text-gray-300 mb-4" size={48} />
               <h3 className="text-lg font-medium text-gray-600 mb-2">
-                Conteúdo da Aula
+                Conteúdo da Aula de Inglês
               </h3>
               <p className="text-gray-500">
-                O conteúdo desta aula será adicionado pelo sistema.
+                O conteúdo desta aula será adicionado pela Hey Gringa.
               </p>
             </div>
           </div>
@@ -102,8 +102,8 @@ const LessonsPanel: React.FC = () => {
     <div className="h-full bg-gray-50">
       {/* Header */}
       <div className="bg-white border-b border-gray-200 p-4">
-        <h1 className="text-xl font-semibold text-gray-900">Aulas Criadas</h1>
-        <p className="text-sm text-gray-500">Visualize suas aulas geradas pelo assistente</p>
+        <h1 className="text-xl font-semibold text-gray-900">Aulas de Inglês Criadas</h1>
+        <p className="text-sm text-gray-500">Visualize suas aulas de inglês geradas pela Hey Gringa</p>
       </div>
 
       {/* Lessons Grid */}
