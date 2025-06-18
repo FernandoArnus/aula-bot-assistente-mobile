@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, Bot } from 'lucide-react';
+import { Send, Bot, Mic, MicOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
@@ -22,6 +22,7 @@ const ChatInterface: React.FC = () => {
   ]);
   const [inputText, setInputText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [isRecording, setIsRecording] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -62,6 +63,16 @@ const ChatInterface: React.FC = () => {
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
       sendMessage();
+    }
+  };
+
+  const toggleRecording = () => {
+    setIsRecording(!isRecording);
+    // Aqui seria implementada a funcionalidade de gravação de áudio
+    if (!isRecording) {
+      console.log('Iniciando gravação de áudio...');
+    } else {
+      console.log('Parando gravação de áudio...');
     }
   };
 
@@ -131,6 +142,14 @@ const ChatInterface: React.FC = () => {
             placeholder="Digite sua mensagem..."
             className="flex-1 border-gray-300 focus:border-primary focus:ring-primary"
           />
+          <Button
+            onClick={toggleRecording}
+            size="icon"
+            variant={isRecording ? "destructive" : "outline"}
+            className={isRecording ? "bg-red-500 hover:bg-red-600" : "border-gray-300 hover:bg-gray-50"}
+          >
+            {isRecording ? <MicOff size={18} /> : <Mic size={18} />}
+          </Button>
           <Button
             onClick={sendMessage}
             size="icon"

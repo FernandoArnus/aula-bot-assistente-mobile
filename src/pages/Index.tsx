@@ -4,9 +4,10 @@ import Navigation from '@/components/Navigation';
 import ChatInterface from '@/components/ChatInterface';
 import LessonsPanel from '@/components/LessonsPanel';
 import RepositoryPanel from '@/components/RepositoryPanel';
+import LoginPanel from '@/components/LoginPanel';
 
 const Index = () => {
-  const [activeTab, setActiveTab] = useState<'chat' | 'lessons' | 'repository'>('chat');
+  const [activeTab, setActiveTab] = useState<'chat' | 'lessons' | 'repository' | 'profile'>('chat');
 
   return (
     <div className="min-h-screen bg-white flex flex-col max-w-md mx-auto">
@@ -15,6 +16,7 @@ const Index = () => {
         {activeTab === 'chat' && <ChatInterface />}
         {activeTab === 'lessons' && <LessonsPanel />}
         {activeTab === 'repository' && <RepositoryPanel />}
+        {activeTab === 'profile' && <LoginPanel />}
       </div>
 
       {/* Navigation */}
